@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4018.5">
+  <GVL Name="GVL" Id="{d664645d-63f4-499c-a559-87646d2fb5c9}">
+    <Declaration><![CDATA[VAR_GLOBAL
+	
+	
+	insertMag: BOOL; (* Variable for inserting Cylinder base in the stack magazine barrel*)
+	Check_Mat: BOOL; (* Variable for starting the material checking actuator*)
+	H_Meas: BOOL;   (* Variable for starting the height measurement actuator*)
+	Testing: BOOL;  (* Variable that is set while the testing station is busy*)
+	T_reset: TIME;	(* time to imitate reset value*)
+	VisuReset: BOOL := TRUE; (* Variable is used to reset the visualization when reset is pressed*)
+	forVisuPos5: BOOL;   (* used for visual only*)
+	
+	
+	(* These variables are all as described in the provided MPS Festo documents*)
+	start: BOOL;
+	stop: BOOL;
+	reset: BOOL;
+	Mag: BOOL;
+	Mag_back: BOOL := TRUE;
+	Mag_front: BOOL;
+	Vacuum: BOOL;
+	Arm_take: BOOL := TRUE;
+	Arm_put: BOOL;
+	Mat_sen: BOOL;
+	Vacumon: BOOL;
+	Vacumoff: BOOL;
+	Armleft: BOOL;
+	Armright: BOOL;
+	Auto: BOOL;
+	Automan: BOOL;
+	L_START: BOOL;
+	L_RESET: BOOL;
+	LiftDown: BOOL;
+	MatPush: BOOL;
+	Slide: BOOL;
+	Part_AV: BOOL;
+	Lift_Up: BOOL;
+	Push_Ba: BOOL;
+	Sen_Mat: BOOL;
+	LiftUp: BOOL;
+	Lift_Down: BOOL := TRUE;
+	Work_ok: BOOL := TRUE;
+	Follow: BOOL;
+	Safety_barrier: BOOL;
+	
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
